@@ -1,17 +1,51 @@
 ---
+import "../styles/general.css";
 
+import cardone from "../assets/placeholder.jpg";
+import cardtwo from "../assets/placeholder2.jpg";
+import ATA1 from "../assets/ATA1.svg"
+import ATA2 from "../assets/ATA2.svg"
+import biglogo from "../assets/YCDK_logo_big.svg"
+import bg1 from "../assets/placeholder.jpg"
+import work from "/videos/Guy_Works.mp4"
+
+import BigCardL from "../components/BigCardL.astro";
+import BigCardR from "../components/BigCardR.astro";
+
+import Nav from "../components/Nav.astro";
+import HeroImg from "../components/HeroImg.astro";
+import HeroVideo from "../components/HeroVideo.astro";
+import Graphics from "../components/Graphics.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <style is:global>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body,
+      h2,
+      p,
+      a {
+        margin: 0;
+      }
+    </style>
+	<Nav />
+	<HeroImg biglogo={biglogo} bgImage={bg1}/>
+	<HeroVideo biglogo={ATA2} herovideo={work}/>
+    <BigCardL placeholder={cardone} buttonText="LOREM IPSUM" />
+    <BigCardR placeholder={cardtwo} buttonText="LOREM IPSUM ..." />
+<Graphics/> 
+</body>
 </html>

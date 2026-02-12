@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import Button from "./Button.astro"
+import logo from "../assets/YCDK_logo_stamp.svg"
+---
+<nav>
+  <Image src={logo} alt="Logo" class="logo"/>
+  <Button buttonText="knap" />
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  .logo {
+    height: 50px;
+   width: clamp(50px, 40vw, 100px);
+  }
