@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+const { placeholder, overskrift,tekst } = Astro.props;
+---
+
+<section class="feature">
+  <Image src={placeholder} alt="Beskrivende tekst" class="placeholder" />
+  <div class="content">
+    <h3>{overskrift}</h3>
+    <p>
+      {tekst} </p>
+  </div>
+</section>
+
+<style>
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px; 
+  box-sizing: border-box;
+  align-items: center;
+  margin: 0;        
+}
+
+
+.placeholder {
+width: clamp(360px, 30vw, 400px);
+  height: auto;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+}
+
+
+</style>

@@ -1,0 +1,112 @@
+---
+const {footerlogo} = Astro.props;
+import { Image } from "astro:assets";
+---
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__left">
+      <Image src={footerlogo} alt="Young Creatives Denmark" class="footer__logo" />
+
+      <p class="footer__text">
+        Lorem ipsum dolor sit amet consectetur. Quis senectus felis
+        turpis lorem congue feugiat sagittis dictum.
+      </p>
+    </div>
+
+    <div class="footer__right">
+      <div class="footer__col">
+        <h4>Socials</h4>
+        <p>Facebook<br />Instagram</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Telefon</h4>
+        <p>60 91 43 26</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Adresse</h4>
+        <p>
+          Jacob Cameron Brook,<br />
+          Landskronagade 27, st.,<br />
+          2100 København Ø
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<style> 
+.footer {
+  background: #3f464b; 
+  color: #e6eaee;
+  height: 100vh;
+  padding: 80px 40px;
+  align-content: center;
+}
+
+.footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.footer__logo {
+  width: 320px; 
+  max-width: 100%;
+  height: auto;
+}
+
+.footer__text {
+  max-width: 420px;
+
+  margin: 0;
+}
+
+
+.footer__right {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px;
+}
+
+
+
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 60px 24px;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: flex-start;
+  }
+
+  .footer__right {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .footer__right .footer__col:nth-of-type(2) { 
+    order: -1;
+}
+
+  .footer__logo {
+    width: 260px;
+  }
+}
+</style>
