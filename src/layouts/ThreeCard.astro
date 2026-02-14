@@ -1,0 +1,44 @@
+---
+---
+<div class="cards-container">
+  <slot />
+</div>
+
+<style>
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  padding: 4rem;
+  box-sizing: border-box;
+    justify-items: center; /* center cards in their grid cells */
+}
+
+/* Tablet: stack vertically, alternate L/R */
+@media (max-width: 1400px) {
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1000px;
+    padding-inline: 2rem;
+    border-left: 2rem solid transparent; 
+    border-right: 2rem solid transparent;   
+    justify-self: center;
+   
+  }
+
+  /* Target each card and alternate alignment */
+  .cards-container :global(.feature:nth-child(odd)) {
+    align-self: flex-start;
+  }
+
+  .cards-container :global(.feature:nth-child(even)) {
+    align-self: flex-end;
+  }
+}
+
+
+
+</style>

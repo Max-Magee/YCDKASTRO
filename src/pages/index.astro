@@ -1,51 +1,60 @@
 ---
-import "../styles/general.css";
+import Layout from "../layouts/Layout.astro";
+import ThreeCard from "../layouts/ThreeCard.astro";
 
-import cardone from "../assets/placeholder.jpg";
-import cardtwo from "../assets/placeholder2.jpg";
-import ATA1 from "../assets/ATA1.svg"
-import ATA2 from "../assets/ATA2.svg"
+import cardone from "../assets/group_21.png";
+import cardtwo from "../assets/group_22.png";
+import cardthree from "../assets/group_23.png";
+import BC1 from "../assets/group_24.png";
+import BC2 from "../assets/group_25.png";
+import AAb from "../assets/AAb.svg"
 import biglogo from "../assets/YCDK_logo_big.svg"
 import bg1 from "../assets/placeholder.jpg"
 import work from "/videos/Guy_Works.mp4"
 
 import BigCardL from "../components/BigCardL.astro";
 import BigCardR from "../components/BigCardR.astro";
-
-import Nav from "../components/Nav.astro";
 import HeroImg from "../components/HeroImg.astro";
 import HeroVideo from "../components/HeroVideo.astro";
 import Graphics from "../components/Graphics.astro";
+import Card from "../components/Card.astro";
+
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <style is:global>
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
-      body,
-      h2,
-      p,
-      a {
-        margin: 0;
-      }
-    </style>
-	<Nav />
+<Layout title="YCDK AtA">
+
 	<HeroImg biglogo={biglogo} bgImage={bg1}/>
-	<HeroVideo biglogo={ATA2} herovideo={work}/>
-    <BigCardL placeholder={cardone} buttonText="LOREM IPSUM" />
-    <BigCardR placeholder={cardtwo} buttonText="LOREM IPSUM ..." />
-<Graphics/> 
-</body>
-</html>
+ 
+  <ThreeCard>
+    <Card
+    placeholder={cardone}
+    overskrift="Tester 1"
+    tekst="Lorem ipsum dolor sit amet consectetur."/>
+    <Card
+    placeholder={cardtwo}
+    overskrift="Tester 2"
+    tekst="Lorem ipsum dolor sit amet consectetur."/>
+    <Card
+    placeholder={cardthree}
+    overskrift="Tester 3"
+    tekst="Lorem ipsum dolor sit amet consectetur."/>
+  </ThreeCard>
+
+	<HeroVideo biglogo={AAb} herovideo={work}/>
+   
+  <BigCardL
+    placeholder={BC1}
+    overskrift="Lorem Ipsum"
+    tekst="Lorem ipsum dolor sit amet consectetur. Quis senectus felis
+        turpis lorem congue feugiat sagittis dictum." buttonText="Knap 1" />
+  <BigCardR
+    placeholder={BC2}
+    overskrift="Lorem Ipsum"
+    tekst="Lorem ipsum dolor sit amet consectetur. Quis senectus felis
+        turpis lorem congue feugiat sagittis dictum." buttonText="Knap 2" />
+
+  <Graphics
+    herovideo={work}
+    overskrift="Lorem Ipsum"/  > 
+
+</Layout>
