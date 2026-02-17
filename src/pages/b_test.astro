@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ThreeCard from "../layouts/ThreeCard.astro";
+
+import cardone from "../assets/Group_22.png";
+import cardtwo from "../assets/Group_27.png";
+import cardthree from "../assets/Group_28.png";
+import BC1 from "../assets/ata_msq1.png";
+import BC2 from "../assets/business2.png";
+import AAb from "../assets/ATA1.svg"
+import biglogo from "../assets/ATA_logo_Blu.svg"
+import bg1 from "../assets/BWbg.png"
+
+import work from "/videos/bg_vid4.mp4"
+import vid2 from "/videos/bg_vid2.mp4"
+
+import BigCardL from "../components/BigCardL.astro";
+import BigCardR from "../components/BigCardR.astro";
+import HeroImg from "../components/HeroImg.astro";
+import HeroVideo from "../components/HeroVideo.astro";
+import Graphics from "../components/Graphics.astro";
+import Card from "../components/Card.astro";
+
+const buttonLink = "/index";
+---
+
+<Layout title="YCDK AtA" buttonLink={buttonLink}>
+
+	<HeroImg biglogo={biglogo} bgImage={bg1}/>
+ 
+  <ThreeCard>
+    <Card
+    placeholder={cardone}
+    overskrift="Tester 1"
+    tekst="Lorem ipsum dolor sit amet consectetur."/>
+    <Card
+    placeholder={cardtwo}
+    overskrift="Tester 2"
+    tekst="Lorem ipsum dolor sit amet consectetur."/>
+    <Card
+    placeholder={cardthree}
+    overskrift="Tester 3"
+    tekst="Lorem ipsum dolor sit amet consectetur."/>
+  </ThreeCard>
+
+	<HeroVideo biglogo={AAb} herovideo={work}/>
+   
+  <BigCardL
+    placeholder={BC1}
+    overskrift="Lorem Ipsum"
+    tekst="Lorem ipsum dolor sit amet consectetur. Quis senectus felis
+        turpis lorem congue feugiat sagittis dictum." buttonText="Knap 1" />
+  <BigCardR
+    placeholder={BC2}
+    overskrift="Lorem Ipsum"
+    tekst="Lorem ipsum dolor sit amet consectetur. Quis senectus felis
+        turpis lorem congue feugiat sagittis dictum." buttonText="Knap 2" />
+
+  <Graphics
+    herovideo={vid2}
+    overskrift="Lorem Ipsum"/  > 
+<style>
+  body {
+  background-color: var(--primary-venice-700);}
+</style>
+</Layout>

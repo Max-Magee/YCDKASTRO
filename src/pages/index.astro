@@ -2,15 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 import ThreeCard from "../layouts/ThreeCard.astro";
 
-import cardone from "../assets/Group_21.png";
-import cardtwo from "../assets/Group_22.png";
-import cardthree from "../assets/Group_23.png";
-import BC1 from "../assets/Group_24.png";
-import BC2 from "../assets/Group_25.png";
-import AAb from "../assets/AAb.svg"
-import biglogo from "../assets/YCDK_logo_big.svg"
-import bg1 from "../assets/placeholder.jpg"
-import work from "/videos/Guy_Works.mp4"
+import cardone from "../assets/Group_22.png";
+import cardtwo from "../assets/Group_27.png";
+import cardthree from "../assets/Group_28.png";
+import BC1 from "../assets/ata_msq1.png";
+import BC2 from "../assets/business2.png";
+import AAb from "../assets/ATA1.svg"
+import biglogo from "../assets/ATA1.svg"
+import bg1 from "../assets/pinkbg.png"
+
+import work from "/videos/bg_vid2.mp4"
+import vid2 from "/videos/bg_vid4.mp4"
 
 import BigCardL from "../components/BigCardL.astro";
 import BigCardR from "../components/BigCardR.astro";
@@ -19,9 +21,10 @@ import HeroVideo from "../components/HeroVideo.astro";
 import Graphics from "../components/Graphics.astro";
 import Card from "../components/Card.astro";
 
+const buttonLink = "/b_test";
 ---
 
-<Layout title="YCDK AtA">
+<Layout title="YCDK AtA" buttonLink={buttonLink}>
 
 	<HeroImg biglogo={biglogo} bgImage={bg1}/>
  
@@ -54,7 +57,7 @@ import Card from "../components/Card.astro";
         turpis lorem congue feugiat sagittis dictum." buttonText="Knap 2" />
 
   <Graphics
-    herovideo={work}
+    herovideo={vid2}
     overskrift="Lorem Ipsum"/  > 
 
 </Layout>
