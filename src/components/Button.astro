@@ -1,8 +1,8 @@
 ---
-const { buttonText } = Astro.props;
+const { buttonText,buttonLink } = Astro.props;
 ---
 
-<a href="#">{buttonText}</a>
+<a href={buttonLink}>{buttonText}</a>
 
 <style>
   a {
