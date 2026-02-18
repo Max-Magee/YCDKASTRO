@@ -1,0 +1,23 @@
+---
+const { overskrift, tekst } = Astro.props;
+---
+
+ 
+ <div class="content">
+    <h1>{overskrift}</h1>
+    <h3>
+      {tekst} </h3>
+  </div>
+
+  <style>
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-sizing: border-box;
+    padding: 3rem;
+    margin-top: 4.5rem;        
+  }
+
+
+</style>

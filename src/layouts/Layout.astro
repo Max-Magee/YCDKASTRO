@@ -1,10 +1,10 @@
 ---
 import "../styles/general.css";
-import footer from "../assets/YCDK_logo_big.svg";
+
 
 import Nav from "../components/Nav.astro"; 
 import Footer from "../components/Footer.astro";
-const { title,buttonLink } = Astro.props;
+const { title,buttonLink, footerlogo  } = Astro.props;
 ---
 
 <html lang="en">
@@ -12,7 +12,7 @@ const { title,buttonLink } = Astro.props;
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
@@ -28,20 +28,26 @@ const { title,buttonLink } = Astro.props;
 
     <Nav buttonLink={buttonLink}/>
     <slot />
-    <Footer footerlogo={footer}/>
+    <Footer footerlogo={footerlogo}/>
 
     <style is:global>
+
+      html, body {
+  overflow-x: hidden;
+}
       *,
       *::before,
       *::after {
         box-sizing: border-box;
       }
+      
       body,
       h2,
       p,
       a {
         margin: 0;
       }
+      
     </style>
 
 </body>

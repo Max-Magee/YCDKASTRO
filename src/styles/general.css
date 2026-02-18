@@ -18,6 +18,8 @@
   --primary-malibu-100: #dbf5ff;
   --primary-venice-50: #eef9ff;
 
+  --new-purple-700: #7a2b4f;
+
   --primary-pink-500: #ff1884;
   --primary-pink-400: #ff5ba6;
   --primary-pink-300: #ff93c8;
@@ -32,6 +34,24 @@
   --secondary-0: #ffffff;
 }
 
+h1,
+h2 {
+  color: var(--primary-venice-700);
+}
+h3,
+h4,
+p {
+  color: var(--secondary-0);
+}
+
+.nupage h1,
+.nupage h2,
+.nupage h3,
+.nupage h4,
+.nupage p {
+  color: var(--new-purple-700);
+}
+
 /* fonts */
 
 body {
@@ -39,9 +59,9 @@ body {
 }
 
 h1 {
-  font-family: "montserrat", sans-serif;
+  font-family: "montserrat alternates", sans-serif;
   font-size: 76px;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 88px;
 }
 
@@ -66,6 +86,12 @@ p {
   /* bigger text */
   font-family: "montserrat", sans-serif;
   font-size: 24px;
+  font-weight: 400;
+}
+
+#footertxt {
+  font-family: "montserrat", sans-serif;
+  font-size: 18px;
   font-weight: 400;
 }
 

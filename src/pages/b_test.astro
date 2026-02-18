@@ -2,17 +2,18 @@
 import Layout from "../layouts/Layout.astro";
 import ThreeCard from "../layouts/ThreeCard.astro";
 
-import cardone from "../assets/Group_22.png";
-import cardtwo from "../assets/Group_27.png";
-import cardthree from "../assets/Group_28.png";
-import BC1 from "../assets/ata_msq1.png";
-import BC2 from "../assets/business2.png";
-import AAb from "../assets/ATA1.svg"
-import biglogo from "../assets/ATA_logo_Blu.svg"
-import bg1 from "../assets/BWbg.png"
+import cardone from "../assets/nustuff/Interview1_Farve.png";
+import cardtwo from "../assets/nustuff/Interview2_Farve.png";
+import cardthree from "../assets/nustuff/Interview3_Farve.png";
+import BC1 from "../assets/nustuff/Business1.png";
+import BC2 from "../assets/nustuff/Business2.png";
+import AAb from "../assets/nustuff/PinkLogo_AtA.svg"
+import biglogo from "../assets/nustuff/3DPinkLogo_AtA.svg"
+import footerlogo from "../assets/nustuff/3DPinkLogo_YCDK.svg"
+import bg1 from "../assets/nustuff/Pink_HeroImg_1_AtA.png"
 
-import work from "/videos/bg_vid4.mp4"
-import vid2 from "/videos/bg_vid2.mp4"
+import work from "/videos/BWHeroVid1_AtA.mp4"
+import vid2 from "/videos/BWHeroVid1_AtA.mp4"
 
 import BigCardL from "../components/BigCardL.astro";
 import BigCardR from "../components/BigCardR.astro";
@@ -20,47 +21,61 @@ import HeroImg from "../components/HeroImg.astro";
 import HeroVideo from "../components/HeroVideo.astro";
 import Graphics from "../components/Graphics.astro";
 import Card from "../components/Card.astro";
+import Textafsnit from "../components/Textafsnit.astro";
 
-const buttonLink = "/index";
+const buttonLink = "/b_test";
 ---
 
-<Layout title="YCDK AtA" buttonLink={buttonLink}>
+<Layout title="YCDK AtA" buttonLink={buttonLink} footerlogo={footerlogo}>
 
-	<HeroImg biglogo={biglogo} bgImage={bg1}/>
- 
+  <div class="nupage">
+<HeroVideo biglogo={biglogo} herovideo={work}/>
+	
+ <Textafsnit overskrift="Det ene 'Ansigt'" tekst="Hør fra tidligere deltagende i 'Ansigt til Ansigt'."/>
   <ThreeCard>
     <Card
     placeholder={cardone}
-    overskrift="Tester 1"
-    tekst="Lorem ipsum dolor sit amet consectetur."/>
+    overskrift="Alex"
+    tekst="Det motiverer mig virkelig, og jeg kan mærke, at jeg glæder mig endnu mere til min fremtid inden for den kreative branche."/>
     <Card
     placeholder={cardtwo}
-    overskrift="Tester 2"
-    tekst="Lorem ipsum dolor sit amet consectetur."/>
+    overskrift="Mathilde"
+    tekst="Jeg synes især, det var fedt at møde professionelle og høre deres historier og erfaringer."/>
     <Card
     placeholder={cardthree}
-    overskrift="Tester 3"
-    tekst="Lorem ipsum dolor sit amet consectetur."/>
+    overskrift="Sofie"
+    tekst="Jeg lagde hurtigt mærke til, hvor varm og hyggelig atmosfæren var, og det gjorde hele oplevelsen meget mere personlig."/>
   </ThreeCard>
 
-	<HeroVideo biglogo={AAb} herovideo={work}/>
-   
+	<HeroImg biglogo={AAb} bgImage={bg1}/>
+   <Textafsnit overskrift="Det andet 'Ansigt'" tekst="Læs om de deltagende virksomheder."/>
   <BigCardL
     placeholder={BC1}
-    overskrift="Lorem Ipsum"
+    overskrift="Ansigt til Ansigt med Market Square"
     tekst="Lorem ipsum dolor sit amet consectetur. Quis senectus felis
-        turpis lorem congue feugiat sagittis dictum." buttonText="Knap 1" />
+        turpis lorem congue feugiat sagittis dictum." buttonText="Læs Mere" />
   <BigCardR
     placeholder={BC2}
-    overskrift="Lorem Ipsum"
+    overskrift="Ansigt til Ansigt med DDB NORD"
     tekst="Lorem ipsum dolor sit amet consectetur. Quis senectus felis
-        turpis lorem congue feugiat sagittis dictum." buttonText="Knap 2" />
+        turpis lorem congue feugiat sagittis dictum." buttonText="Læs Mere" />
 
   <Graphics
     herovideo={vid2}
-    overskrift="Lorem Ipsum"/  > 
-<style>
-  body {
-  background-color: var(--primary-venice-700);}
-</style>
+    overskrift="Næste event 3. Marts 2026"/  > 
+
+</div>
+
+
+
+
 </Layout>
+
+<style is:global>
+body {
+  background-color: var(--primary-pink-200);
+
+    --footer-bg: var(--secondary-800);
+  }
+</style>
+
